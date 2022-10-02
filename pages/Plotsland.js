@@ -8,24 +8,44 @@ import slugify from 'slugify';
 
 
 
-export async function getStaticProps(context) {
-    const res = await fetch(`${Website}plotlandget.php`)
-    const data = await res.json()
+// export async function getStaticProps(context) {
+//     const res = await fetch(`${Website}plotlandget.php`)
+//     const data = await res.json()
 
-    if (!data) {
-      return {
-        redirect: {
-          destination: '/',
-          permanent: false,
-          // statusCode: 301
-        },
-      }
-    }
+//     if (!data) {
+//       return {
+//         redirect: {
+//           destination: '/',
+//           permanent: false,
+//           // statusCode: 301
+//         },
+//       }
+//     }
   
-    return {
-      props: { data }, // will be passed to the page component as props
-    }
-  }
+//     return {
+//       props: { data }, // will be passed to the page component as props
+//     }
+//   }
+
+
+
+
+export async function getServerSideProps() {
+  // Fetch data from external API
+
+//   
+// console.log(context.params)
+  const res = await fetch(`${Website}plotlandget.php`)
+  const data = await res.json()
+
+  // Pass data to the page via props
+  return { props: { data } }
+}
+
+
+
+
+
 
 
 
