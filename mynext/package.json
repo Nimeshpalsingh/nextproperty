@@ -30,7 +30,7 @@
     "slugify": "^1.6.5",
     "stringify": "^5.2.0",
     "sweetalert": "^2.1.2",
-    "License ":"Nimesh"
+    "License ":"MIT"
   },
   "devDependencies": {
     "eslint": "8.24.0",
