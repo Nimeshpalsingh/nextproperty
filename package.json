@@ -5,8 +5,10 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start:dev": "next start",
-    "lint": "next lint"
+    "start": "next start",
+    "start:prod": "next start -p 80",
+    "export": "next build && next export"
+    
   },
   "dependencies": {
     "@emotion/react": "^11.10.4",
