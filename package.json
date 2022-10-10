@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "start:prod": "next start -p 80",
-    "start:prod2": "next start -p 3000",
+    "start:prod2": "next start -p 4000",
+    "start:prod3": "next start -p 222",
     "export": "next build && next export"
     
   },
